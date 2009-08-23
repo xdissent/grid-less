@@ -1,0 +1,62 @@
+
+@grid-width: 960px;
+@grid-columns: 12;
+@grid-margin: 0px;
+@grid-padding: 0px;
+@grid-column-width: @grid-width / @grid-columns;
+
+@grid-container {
+	margin-left: auto;
+	margin-right: auto;
+	width: @grid-width;
+}
+
+@grid(@columns: 1, @prefix: 0, @suffix: 0) {
+	display: inline;
+	float: left;
+	margin-left: @grid-margin;
+	margin-right: @grid-margin;
+	padding-left: @grid-padding + @prefix * @grid-column-width;
+	padding-right: @grid-padding + @suffix * @grid-column-width;
+	width: @grid-column-width * @columns - 2 * @grid-margin - 2 * @grid-padding;
+}
+
+@alpha {
+    margin-left: 0;
+}
+
+@omega {
+    margin-right: 0;
+}
+
+.clear {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+.clearfix:after {
+	clear: both;
+	content: ' ';
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+.clearfix {
+	display: inline-block;
+}
+
+* html .clearfix {
+	height: 1%;
+}
+
+.clearfix {
+	display: block;
+}
