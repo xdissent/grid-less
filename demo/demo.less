@@ -1,0 +1,36 @@
+@import url(../src/grid.less);
+
+#wrapper {
+    @grid-container;
+    
+    #header {
+        @grid(12);
+        
+        #logo {
+            @grid(2);
+            @alpha;
+            
+            font-size: 200%;
+            text-align: right;
+        }
+        
+        #tagline {
+            @grid(10);
+            @omega;
+            
+            text-align: left;
+        }
+    }
+    
+    #sidebar {
+        @grid(3);
+    }
+    
+    #content {
+        @grid(9);
+    }
+    
+    #footer {
+        @grid(12);
+    }
+}
