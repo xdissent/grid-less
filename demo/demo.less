@@ -1,24 +1,29 @@
 @import url(../src/grid.less);
 
+body {
+    font-family: Georgia;
+}
+
 #wrapper {
     @grid-container;
     
     #header {
         @grid(12);
         
+        
         #logo {
-            @grid(2);
+            @grid(3, 0, 9);
             @alpha;
-            
-            font-size: 200%;
-            text-align: right;
+            @omega;
+
+            @h1;
+            margin-bottom: 0;
         }
         
         #tagline {
-            @grid(10);
+            @grid(3, 0, 9);
+            @alpha;
             @omega;
-            
-            text-align: left;
         }
     }
     

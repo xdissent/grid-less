@@ -33,24 +33,38 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-body { font: 13px/1.5 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif; }
+body { font: 12px/18px Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif; }
 a:focus { outline: 1px dotted; }
 hr {
   border: 0 #cccccc solid;
   border-top-width: 1px;
   clear: both;
   height: 0;
+  margin-top: -1px;
 }
-h1 { font-size: 25px; }
-h2 { font-size: 23px; }
-h3 { font-size: 21px; }
-h4 { font-size: 19px; }
-h5 { font-size: 17px; }
-h6 { font-size: 15px; }
+h1 {
+  font-weight: bold;
+  font-size: 2.5em;
+  line-height: 1.2em;
+}
+h2 {
+  font-weight: bold;
+  font-size: 2em;
+  line-height: 1.5em;
+}
+h3 {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+h4 {
+  font-weight: bold;
+  font-size: 1.25em;
+}
+h5, h6 { font-size: 1em; }
 ol { list-style: decimal; }
 ul { list-style: disc; }
 li { margin-left: 30px; }
-p, dl, hr, h1, h2, h3, h4, h5, h6, ol, ul, pre, table, address, fieldset { margin-bottom: 20px; }
+p, dl, hr, h1, h2, h3, h4, h5, h6, ol, ul, pre, table, address, fieldset { margin-bottom: 18px; }
 .clear {
   clear: both;
   display: block;
@@ -72,6 +86,7 @@ p, dl, hr, h1, h2, h3, h4, h5, h6, ol, ul, pre, table, address, fieldset { margi
 .clearfix { display: inline-block; }
 * html .clearfix { height: 1%; }
 .clearfix { display: block; }
+body { font-family: Georgia; }
 #wrapper {
   margin-left: auto;
   margin-right: auto;
@@ -80,59 +95,62 @@ p, dl, hr, h1, h2, h3, h4, h5, h6, ol, ul, pre, table, address, fieldset { margi
 #wrapper #header {
   display: inline;
   float: left;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: 10px;
+  margin-right: 10px;
   padding-left: 0px;
   padding-right: 0px;
-  width: 960px;
+  width: 940px;
 }
 #wrapper #header #logo {
   display: inline;
   float: left;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: 10px;
+  margin-right: 10px;
   padding-left: 0px;
-  padding-right: 0px;
-  width: 160px;
+  padding-right: 720px;
+  width: 220px;
   margin-left: 0;
-  font-size: 200%;
-  text-align: right;
+  margin-right: 0;
+  font-weight: bold;
+  font-size: 2.5em;
+  line-height: 1.2em;
+  margin-bottom: 0;
 }
 #wrapper #header #tagline {
   display: inline;
   float: left;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: 10px;
+  margin-right: 10px;
   padding-left: 0px;
-  padding-right: 0px;
-  width: 800px;
+  padding-right: 720px;
+  width: 220px;
+  margin-left: 0;
   margin-right: 0;
-  text-align: left;
 }
 #wrapper #sidebar {
   display: inline;
   float: left;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: 10px;
+  margin-right: 10px;
   padding-left: 0px;
   padding-right: 0px;
-  width: 240px;
+  width: 220px;
 }
 #wrapper #content {
   display: inline;
   float: left;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: 10px;
+  margin-right: 10px;
   padding-left: 0px;
   padding-right: 0px;
-  width: 720px;
+  width: 700px;
 }
 #wrapper #footer {
   display: inline;
   float: left;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: 10px;
+  margin-right: 10px;
   padding-left: 0px;
   padding-right: 0px;
-  width: 960px;
+  width: 940px;
 }

@@ -1,31 +1,29 @@
+@import url(reset.less);
+@import url(text.less);
 
-@grid-width: 960px;
-@grid-columns: 12;
-@grid-margin: 0px;
-@grid-padding: 0px;
-@grid-column-width: @grid-width / @grid-columns;
-
-@grid-container {
+@grid-container(@grid-width: 960px, @grid-columns: 12px, @grid-margin: 10px, @grid-padding: 0px) {
+    /* This should take into consideration margins and padding */
+    @grid-column-width: @grid-width / @grid-columns;
 	margin-left: auto;
 	margin-right: auto;
 	width: @grid-width;
 }
 
-@grid(@columns: 1, @prefix: 0, @suffix: 0) {
+@grid(@grid-columns: 1, @grid-prefix: 0, @grid-suffix: 0) {
 	display: inline;
 	float: left;
 	margin-left: @grid-margin;
 	margin-right: @grid-margin;
-	padding-left: @grid-padding + @prefix * @grid-column-width;
-	padding-right: @grid-padding + @suffix * @grid-column-width;
-	width: @grid-column-width * @columns - 2 * @grid-margin - 2 * @grid-padding;
+	padding-left: @grid-padding + @grid-prefix * @grid-column-width;
+	padding-right: @grid-padding + @grid-suffix * @grid-column-width;
+	width: @grid-column-width * @grid-columns - 2 * @grid-margin - 2 * @grid-padding;
 }
 
-@alpha {
+@alpha() {
     margin-left: 0;
 }
 
-@omega {
+@omega() {
     margin-right: 0;
 }
 

@@ -9,7 +9,7 @@
 ----------------------------------------------------------------------------------------------------*/
 
 body {
-	font: 13px/1.5 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;
+	font: 12px/18px Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif;
 }
 
 a:focus {
@@ -21,34 +21,49 @@ hr {
 	border-top-width: 1px;
 	clear: both;
 	height: 0;
+	margin-top: -1px;
 }
 
 /* `Headings
 ----------------------------------------------------------------------------------------------------*/
 
-h1 {
-	font-size: 25px;
+@h1() {
+    font-weight: bold;
+    font-size: 2.5em;
+    line-height: 1.2em;
 }
 
-h2 {
-	font-size: 23px;
+@h2() {
+    font-weight: bold;
+    font-size: 2em;
+    line-height: 1.5em;
 }
 
-h3 {
-	font-size: 21px;
+@h3() {
+    font-weight: bold;
+    font-size: 1.5em;
 }
 
-h4 {
-	font-size: 19px;
+@h4() {
+    font-weight: bold;
+	font-size: 1.25em;
 }
 
-h5 {
-	font-size: 17px;
+@h5() {
+	font-size: 1em;
 }
 
-h6 {
-	font-size: 15px;
+@h6() {
+	font-size: 1em;
 }
+
+h1 { @h1; }
+h2 { @h2; }
+h3 { @h3; }
+h4 { @h4; }
+h5 { @h5; }
+h6 { @h6; }
+
 
 /* `Spacing
 ----------------------------------------------------------------------------------------------------*/
@@ -80,5 +95,5 @@ pre,
 table,
 address,
 fieldset {
-	margin-bottom: 20px;
+	margin-bottom: 18px;
 }
