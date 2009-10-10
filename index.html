@@ -45,12 +45,11 @@
         
         <div id="intro">
             <h2>What the hell is it?</h2>
-            <p>If you're reading this, you were supposed to end up here yet. I'm working on it...</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Grid LESS is a <a href="http://lesscss.org" title="LESS">LESS</a> based grid framework for web content. It will generate CSS files for your site allowing you to focus on actual design instead of tweaking endless style declarations. </p>
             
             <h2>So, what's the big deal?</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>We've all seen the many available CSS grid systems out there and chances are you've already picked a favorite. The problem is, you have to clutter your markup with extraneous class names to even use them <em>and</em> they're painfully strict about column width and margins.</p>
+            <p>Grid LESS solves all these problems and more.</p>
             <ul>
                 <li>
                     <h3>100% markup free grids</h3>
@@ -72,25 +71,46 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             
-            <code><pre>&lt;div id=&quot;wrapper&quot;&gt;
-    &lt;div id=&quot;header&quot;&gt;
-        &lt;p class=&quot;logo&quot;&gt;Widgets Inc.&lt;/p&gt;
-        &lt;ul class=&quot;navigation&quot;&gt;
-            &lt;li&gt;&lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
-            ...
-        &lt;/ul&gt;
-    &lt;/div&gt;
-    &lt;div id=&quot;sidebar&quot;&gt;
-        ...
-    &lt;/div&gt;
-    &lt;div id=&quot;content&quot;&gt;
-        &lt;p&gt;Lorem ipsum dolor...&lt;/p&gt;
-        ...
-    &lt;/div&gt;
-    ...
-&lt;/div&gt;</pre></code>
+            <div id="markup">
+                <h3>Markup</h3>
+                <code><pre>&lt;html&gt;
+    &lt;body&gt;
+        &lt;div id=&quot;wrapper&quot;&gt;
+                        
+            &lt;div id=&quot;header&quot;&gt;
             
-            <code><pre>#wrapper {
+                &lt;p class=&quot;logo&quot;&gt;Widgets Inc.&lt;/p&gt;
+                
+                &lt;ul class=&quot;navigation&quot;&gt;
+                    &lt;li&gt;
+                        &lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt;
+                    &lt;/li&gt;
+                    ...
+                &lt;/ul&gt;
+                
+            &lt;/div&gt;
+            
+            &lt;div id=&quot;sidebar&quot;&gt;
+                ...
+            &lt;/div&gt;
+            
+            &lt;div id=&quot;content&quot;&gt;
+            
+                &lt;p&gt;Lorem ipsum dolor...&lt;/p&gt;
+        
+                ...
+            &lt;/div&gt;
+        
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</pre></code>
+            </div>
+            
+            <div id="less">
+                <h3>LESS</h3>
+                <code><pre>@import url(grid.less);
+
+#wrapper {
     .grid-container(12);
 
     #header {
@@ -119,6 +139,7 @@
         .pull(3);
     }
 }</pre></code>
+            </div>
 
         </div>
           
