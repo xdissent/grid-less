@@ -1,0 +1,95 @@
+/**
+ * Grid LESS
+ *
+ * Horizontal Grid
+ *
+ * Copyright 2009 Greg Thornton <xdissent@gmail.com>
+ * License: http://creativecommons.org/licenses/by-sa/3.0/us/
+ */
+
+@import url(reset.less);
+@import url(text.less);
+
+/**
+ * This is to prevent errors.
+ */
+@grid-column-width: 10;
+
+/**
+ * Create a grid container.
+ */
+.grid-container(@grid-container-columns:12, @grid-container-width: 960px, @grid-column-margin: 10px) {
+    width: @grid-container-width;
+    margin-right: auto;
+    margin-left: auto;
+
+    /**
+     * Variable passed to child grids.
+     */
+    @grid-column-width: @grid-container-width / @grid-container-columns;
+}
+
+/**
+ * Create a grid.
+ */
+.grid(@grid-columns: 0) {
+
+    /**
+     * Styles
+     */
+    display: inline;
+    float: left;
+    position: relative;
+    margin-left: @grid-column-margin;
+    margin-right: @grid-column-margin;
+    width: @grid-column-width * @grid-columns - 2 * @grid-column-margin;
+}
+
+/**
+ * Add empty columns to the left.
+ */
+.prefix(@grid-prefix-columns: 0) {
+    padding-left: @grid-column-width * @grid-prefix-columns;
+}
+
+/**
+ * Add empty columns to the right.
+ */
+.suffix(@grid-suffix-columns: 0) {
+    padding-right: @grid-column-width * @grid-suffix-columns;
+}
+
+/**
+ * Pull grid to the left.
+ */
+.pull(@grid-pull-columns: 0) {
+    left: 0 - @grid-column-width * @grid-pull-columns;
+}
+
+/**
+ * Push grid to the right.
+ */
+.push(@grid-push-columns: 0) {
+    left: @grid-column-width * @grid-push-columns;
+}
+
+/**
+ * The first grid inside another grid.
+ */
+.alpha {
+    margin-left: 0;
+}
+
+/**
+ * The last grid inside another grid.
+ */
+.omega {
+    margin-right: 0;
+}
+
+/**
+ * Make an element clear all floats.
+ */
+.clear {
+    clear: both;
+}

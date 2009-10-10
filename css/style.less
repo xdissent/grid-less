@@ -1,0 +1,88 @@
+/**
+ * Grid LESS
+ *
+ * GitHub Page
+ *
+ * Copyright 2009 Greg Thornton <xdissent@gmail.com>
+ * License: http://creativecommons.org/licenses/by-sa/3.0/us/
+ */
+
+/**
+ * Import Grid LESS.
+ */
+@import url(grid.less);
+
+body{
+    background-color: #d9d5d2;
+    color: #fff;
+}
+
+a {
+    color: #d9d5d2;
+}
+
+#forkme {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#wrapper {
+    .grid-container(16, 960px);
+    
+    background-color: #733e10;
+     
+    #header {
+        .grid(16px);
+    }
+    
+    #sidebar {
+        .grid(4px);
+        .push(12px);
+        
+        text-align: center;
+        background-color: #a6a29f;
+    }
+
+    #intro {
+        .grid(12px);
+        .pull(4px);
+        
+        ul {
+            li {
+                .grid(4px);
+            }
+            
+            li:first-child {
+                .alpha;
+            }
+            
+            li:last-child {
+                .omega;
+            }
+        }
+    }
+    
+    #tutorial {
+        .grid(16px);
+        
+        code {
+            .grid(7px);
+            .prefix(1px);
+            .alpha;
+            
+            overflow: auto;
+            background-color: #d9d5d2;
+            color: #333;
+        }
+        
+        code:last-child {
+            .omega;
+            margin-left: 10px;
+        }
+    }
+
+    #footer {
+        .grid(16px);
+    }
+}
