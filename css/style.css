@@ -153,6 +153,13 @@ pre {
   left: 720px;
   text-align: center;
   background-color: #a6a29f;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+}
+#wrapper #sidebar h3 {
+  font-weight: bold;
+  font-size: 2.5em;
+  line-height: 1.2em;
 }
 #wrapper #intro {
   display: inline;
