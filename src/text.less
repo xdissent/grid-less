@@ -1,15 +1,19 @@
-/*
-    960 Grid System ~ Text CSS.
-    Learn more ~ http://960.gs/
+/**
+ * Grid LESS
+ *
+ * Vertical Grid and Text
+ *
+ * Copyright 2009 Greg Thornton <xdissent@gmail.com>
+ * License: http://creativecommons.org/licenses/by-sa/3.0/us/
+ */
 
-    Licensed under GPL and MIT.
-*/
-
-/* `Basic HTML
-----------------------------------------------------------------------------------------------------*/
+@font-size: 12px;
+@line-height: 18px;
 
 body {
-    font: 12px/18px Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif;
+    font-family: Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif;
+    font-size: @font-size;
+    line-height: @line-height;
 }
 
 a:focus {
@@ -24,55 +28,48 @@ hr {
     margin-top: -1px;
 }
 
-/* `Headings
-----------------------------------------------------------------------------------------------------*/
-
-@h1() {
+.h1 {
     font-weight: bold;
     font-size: 2.5em;
     line-height: 1.2em;
 }
 
-@h2() {
+.h2 {
     font-weight: bold;
     font-size: 2em;
-    line-height: 1.5em;
+    line-height: 18px;
 }
 
-@h3() {
+.h3 {
     font-weight: bold;
     font-size: 1.5em;
     line-height: 18px;
 }
 
-@h4() {
+.h4 {
     font-weight: bold;
-    font-size: 1.25em;
+	font-size: 1.25em;
     line-height: 18px;
 }
 
-@h5() {
-    font-size: 1em;
+.h5 {
+    font-weight: bold;
+	font-size: 1em;
+    line-height: 18px;
+}
+
+.h6 {
     font-weight: normal;
+	font-size: 1em;
     line-height: 18px;
 }
 
-@h6() {
-    font-weight: normal;
-    font-size: 1em;
-    line-height: 18px;
-}
-
-h1 { @h1; }
-h2 { @h2; }
-h3 { @h3; }
-h4 { @h4; }
-h5 { @h5; }
-h6 { @h6; }
-
-
-/* `Spacing
-----------------------------------------------------------------------------------------------------*/
+h1 { .h1; }
+h2 { .h2; }
+h3 { .h3; }
+h4 { .h4; }
+h5 { .h5; }
+h6 { .h6; }
 
 ol {
     list-style: decimal;
@@ -101,5 +98,5 @@ pre,
 table,
 address,
 fieldset {
-    margin-bottom: 18px;
+	margin-bottom: @line-height;
 }

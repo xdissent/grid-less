@@ -1,41 +1,48 @@
+/**
+ * Grid LESS
+ *
+ * Demo
+ *
+ * Copyright 2009 Greg Thornton <xdissent@gmail.com>
+ * License: http://creativecommons.org/licenses/by-sa/3.0/us/
+ */
+
+/**
+ * Import Grid LESS.
+ */
 @import url(../src/grid.less);
 
-body {
-    font-family: Georgia;
-}
-
 #wrapper {
-    @grid-container;
-    
+    .grid-container(16, 960px);
+
+    background-color: #666;
+     
     #header {
-        @grid(12);
-        
+        .grid(16px);
         
         #logo {
-            @grid(3, 0, 9);
-            @alpha;
-            @omega;
-
-            @h1;
-            margin-bottom: 0;
+            .grid(5px);
+            .alpha;
+            .h2;
         }
         
         #tagline {
-            @grid(3, 0, 9);
-            @alpha;
-            @omega;
+            .grid(11px);
+            .omega;
         }
     }
     
     #sidebar {
-        @grid(3);
+        .grid(5px);
     }
-    
+
     #content {
-        @grid(9);
+        .grid(11px);
+        
+        background-color: #f00;
     }
-    
+
     #footer {
-        @grid(12);
+        .grid(16px);
     }
 }
