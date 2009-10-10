@@ -1,60 +1,95 @@
+/**
+ * Grid LESS
+ *
+ * Horizontal Grid
+ *
+ * Copyright 2009 Greg Thornton <xdissent@gmail.com>
+ * License: http://creativecommons.org/licenses/by-sa/3.0/us/
+ */
+
 @import url(reset.less);
 @import url(text.less);
 
-@grid-container(@grid-width: 960px, @grid-columns: 12px, @grid-margin: 10px, @grid-padding: 0px) {
-    /* This should take into consideration margins and padding */
-    @grid-column-width: @grid-width / @grid-columns;
-	margin-left: auto;
-	margin-right: auto;
-	width: @grid-width;
+/**
+ * This is to prevent errors.
+ */
+@grid-column-width: 10;
+
+/**
+ * Create a grid container.
+ */
+.grid-container(@grid-container-columns:12, @grid-container-width: 960px, @grid-column-margin: 10px) {
+    width: @grid-container-width;
+    margin-right: auto;
+    margin-left: auto;
+
+    /**
+     * Variable passed to child grids.
+     */
+    @grid-column-width: @grid-container-width / @grid-container-columns;
 }
 
-@grid(@grid-columns: 1, @grid-prefix: 0, @grid-suffix: 0) {
+/**
+ * Create a grid.
+ */
+.grid(@grid-columns: 0) {
+
+    /**
+     * Styles
+     */
 	display: inline;
 	float: left;
-	margin-left: @grid-margin;
-	margin-right: @grid-margin;
-	padding-left: @grid-padding + @grid-prefix * @grid-column-width;
-	padding-right: @grid-padding + @grid-suffix * @grid-column-width;
-	width: @grid-column-width * @grid-columns - 2 * @grid-margin - 2 * @grid-padding;
+	position: relative;
+	margin-left: @grid-column-margin;
+	margin-right: @grid-column-margin;
+    width: @grid-column-width * @grid-columns - 2 * @grid-column-margin;
 }
 
-@alpha() {
+/**
+ * Add empty columns to the left.
+ */
+.prefix(@grid-prefix-columns: 0) {
+    padding-left: @grid-column-width * @grid-prefix-columns;
+}
+
+/**
+ * Add empty columns to the right.
+ */
+.suffix(@grid-suffix-columns: 0) {
+    padding-right: @grid-column-width * @grid-suffix-columns;
+}
+
+/**
+ * Pull grid to the left.
+ */
+.pull(@grid-pull-columns: 0) {
+    left: 0 - @grid-column-width * @grid-pull-columns;
+}
+
+/**
+ * Push grid to the right.
+ */
+.push(@grid-push-columns: 0) {
+    left: @grid-column-width * @grid-push-columns;
+}
+
+/**
+ * The first grid inside another grid.
+ */
+.alpha {
     margin-left: 0;
 }
 
-@omega() {
+/**
+ * The last grid inside another grid.
+ */
+.omega {
     margin-right: 0;
 }
 
+/**
+ * Make an element clear all floats.
+ */
 .clear {
-	clear: both;
-	display: block;
-	overflow: hidden;
-	visibility: hidden;
-	width: 0;
-	height: 0;
-}
-
-.clearfix:after {
-	clear: both;
-	content: ' ';
-	display: block;
-	font-size: 0;
-	line-height: 0;
-	visibility: hidden;
-	width: 0;
-	height: 0;
-}
-
-.clearfix {
-	display: inline-block;
-}
-
-* html .clearfix {
-	height: 1%;
-}
-
-.clearfix {
-	display: block;
+    clear: both;
 }
