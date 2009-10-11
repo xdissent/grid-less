@@ -46,6 +46,26 @@ hr {
   height: 0;
   margin-top: -1px;
 }
+.gargantuan {
+  font-weight: bold;
+  font-size: 6em;
+  line-height: 1em;
+}
+.enormous {
+  font-weight: bold;
+  font-size: 5em;
+  line-height: 1.2em;
+}
+.giant {
+  font-weight: bold;
+  font-size: 4em;
+  line-height: 1.125em;
+}
+.huge {
+  font-weight: bold;
+  font-size: 3em;
+  line-height: 1.5em;
+}
 .h1 {
   font-weight: bold;
   font-size: 2.5em;
@@ -54,7 +74,7 @@ hr {
 .h2 {
   font-weight: bold;
   font-size: 2em;
-  line-height: 18px;
+  line-height: 1.5em;
 }
 .h3 {
   font-weight: bold;
@@ -84,7 +104,7 @@ h1 {
 h2 {
   font-weight: bold;
   font-size: 2em;
-  line-height: 18px;
+  line-height: 1.5em;
 }
 h3 {
   font-weight: bold;
@@ -107,7 +127,7 @@ h6 {
   line-height: 18px;
 }
 ol { list-style: decimal; }
-ul { list-style: disc; }
+ul { list-style: none; }
 li { margin-left: 30px; }
 p, dl, hr, h1, h2, h3, h4, h5, h6, ol, ul, pre, table, address, fieldset { margin-bottom: 18px; }
 .alpha { margin-left: 0; }
@@ -150,8 +170,34 @@ h2 { font-style: italic; }
   font-family: Georgia;
   color: #ff0000;
 }
-#wrapper #header h1 { font-weight: normal; }
 #wrapper #header a { color: #ff0000; }
+#wrapper #header h1 {
+  display: inline;
+  float: left;
+  position: relative;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 940px;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+  font-size: 6em;
+  line-height: 1em;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+#wrapper #header p {
+  display: inline;
+  float: left;
+  position: relative;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 760px;
+  padding-left: 180px;
+  margin-left: 0;
+  margin-right: 0;
+  font-style: italic;
+}
 #wrapper #sidebar {
   display: inline;
   float: left;
