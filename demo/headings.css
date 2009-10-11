@@ -46,26 +46,6 @@ hr {
   height: 0;
   margin-top: -1px;
 }
-.gargantuan {
-  font-weight: bold;
-  font-size: 6em;
-  line-height: 1em;
-}
-.enormous {
-  font-weight: bold;
-  font-size: 5em;
-  line-height: 1.2em;
-}
-.giant {
-  font-weight: bold;
-  font-size: 4em;
-  line-height: 1.125em;
-}
-.huge {
-  font-weight: bold;
-  font-size: 3em;
-  line-height: 1.5em;
-}
 .h1 {
   font-weight: bold;
   font-size: 2.5em;
@@ -127,7 +107,7 @@ h6 {
   line-height: 18px;
 }
 ol { list-style: decimal; }
-ul { list-style: none; }
+ul { list-style: disc; }
 li { margin-left: 30px; }
 p, dl, hr, h1, h2, h3, h4, h5, h6, ol, ul, pre, table, address, fieldset { margin-bottom: 18px; }
 .alpha { margin-left: 0; }
@@ -137,59 +117,9 @@ p, dl, hr, h1, h2, h3, h4, h5, h6, ol, ul, pre, table, address, fieldset { margi
   width: 960px;
   margin-right: auto;
   margin-left: auto;
+  background: url(vertical.jpg) repeat-y top left;
 }
-#wrapper #header {
-  display: inline;
-  float: left;
-  position: relative;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 940px;
-}
-#wrapper #header #logo {
-  display: inline;
-  float: left;
-  position: relative;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 940px;
-  margin-left: 0;
-  margin-right: 0;
-  font-weight: bold;
-  font-size: 6em;
-  line-height: 1em;
-  font-weight: normal;
-  font-family: Georgia;
-  margin-bottom: 0;
-}
-#wrapper #header #tagline {
-  display: inline;
-  float: left;
-  position: relative;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 760px;
-  padding-left: 180px;
-  margin-left: 0;
-  margin-right: 0;
-}
-#wrapper #sidebar {
-  display: inline;
-  float: left;
-  position: relative;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 280px;
-}
-#wrapper #content {
-  display: inline;
-  float: left;
-  position: relative;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 640px;
-}
-#wrapper #footer {
+#wrapper > div:first-child {
   display: inline;
   float: left;
   position: relative;

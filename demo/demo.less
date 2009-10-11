@@ -13,36 +13,38 @@
 @import url(../src/grid.less);
 
 #wrapper {
-    .grid-container(16, 960px);
-
-    background-color: #666;
+    .grid-container(16 );
      
     #header {
-        .grid(16px);
+        .grid(16 );
         
         #logo {
-            .grid(5px);
+            .grid(16 );
             .alpha;
-            .h2;
+            .omega;
+            .gargantuan;
+            font-weight: normal;
+            font-family: Georgia;
+            margin-bottom: 0;
         }
         
         #tagline {
-            .grid(11px);
+            .grid(13 );
+            .prefix(3 );
+            .alpha;
             .omega;
         }
     }
     
     #sidebar {
-        .grid(5px);
+        .grid(5 );
     }
 
     #content {
-        .grid(11px);
-        
-        background-color: #f00;
+        .grid(11 );
     }
 
     #footer {
-        .grid(16px);
+        .grid(16 );
     }
 }

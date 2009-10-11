@@ -1,0 +1,23 @@
+/**
+ * Grid LESS
+ *
+ * Headings
+ *
+ * Copyright 2009 Greg Thornton <xdissent@gmail.com>
+ * License: http://creativecommons.org/licenses/by-sa/3.0/us/
+ */
+
+/**
+ * Import Grid LESS.
+ */
+@import url(../src/grid.less);
+
+#wrapper {
+    .grid-container(16 );
+    
+    background: url(vertical.jpg) repeat-y top left;
+    
+    > div:first-child {
+        .grid(16 );
+    }
+}
