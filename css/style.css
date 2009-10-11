@@ -133,6 +133,7 @@ pre {
   background-color: #d9d5d2;
   color: #333333;
 }
+h2 { font-style: italic; }
 #wrapper {
   width: 960px;
   margin-right: auto;
@@ -188,6 +189,14 @@ pre {
 }
 #wrapper #intro ul li:first-child { margin-left: 0; }
 #wrapper #intro ul li:last-child { margin-right: 0; }
+#wrapper #examples {
+  display: inline;
+  float: left;
+  position: relative;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 940px;
+}
 #wrapper #tutorial {
   display: inline;
   float: left;
