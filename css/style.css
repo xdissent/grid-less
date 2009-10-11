@@ -147,12 +147,6 @@ a:hover { text-decoration: underline; }
   top: 0;
   right: 0;
 }
-code {
-  color: #666666;
-  background-color: #cccccc;
-  padding-right: 4px;
-  padding-left: 4px;
-}
 pre {
   padding: 18px;
   overflow: auto;
@@ -256,6 +250,12 @@ h2 { font-style: italic; }
   margin-left: 10px;
   margin-right: 10px;
   width: 940px;
+}
+#wrapper #tutorial p > code {
+  color: #666666;
+  background-color: #cccccc;
+  padding-right: 4px;
+  padding-left: 4px;
 }
 #wrapper #tutorial #markup {
   display: inline;
