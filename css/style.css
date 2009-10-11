@@ -114,10 +114,14 @@ p, dl, hr, h1, h2, h3, h4, h5, h6, ol, ul, pre, table, address, fieldset { margi
 .omega { margin-right: 0; }
 .clear { clear: both; }
 body {
-  background-color: #d9d5d2;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #2b2b2b;
 }
-a { color: #d9d5d2; }
+a {
+  color: #5b5b5b;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
 #forkme {
   position: absolute;
   top: 0;
@@ -133,7 +137,7 @@ pre {
   width: 960px;
   margin-right: auto;
   margin-left: auto;
-  background-color: #733e10;
+  background-color: #efefef;
 }
 #wrapper #header {
   display: inline;
@@ -142,7 +146,11 @@ pre {
   margin-left: 10px;
   margin-right: 10px;
   width: 940px;
+  font-family: Georgia;
+  color: #ff0000;
 }
+#wrapper #header h1 { font-weight: normal; }
+#wrapper #header a { color: #ff0000; }
 #wrapper #sidebar {
   display: inline;
   float: left;
@@ -152,7 +160,7 @@ pre {
   width: 220px;
   left: 720px;
   text-align: center;
-  background-color: #a6a29f;
+  background-color: #ffffff;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
 }

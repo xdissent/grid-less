@@ -13,12 +13,17 @@
 @import url(grid.less);
 
 body{
-    background-color: #d9d5d2;
-    color: #fff;
+    background-color: #ffffff;
+    color: #2b2b2b;
 }
 
 a {
-    color: #d9d5d2;
+    color: #5b5b5b;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 #forkme {
@@ -37,10 +42,21 @@ pre {
 #wrapper {
     .grid-container(16, 960px);
     
-    background-color: #733e10;
+    background-color: #efefef;
      
     #header {
         .grid(16px);
+        
+        font-family: Georgia;
+        color: #ff0000;
+        
+        h1 {
+            font-weight: normal;
+        }
+        
+        a {
+            color: #ff0000;
+        }
     }
     
     #sidebar {
@@ -52,7 +68,7 @@ pre {
         }
         
         text-align: center;
-        background-color: #a6a29f;
+        background-color: #ffffff;
         -webkit-border-radius: 10px;
         -moz-border-radius: 10px;
     }
