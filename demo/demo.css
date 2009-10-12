@@ -147,12 +147,6 @@ p, dl, hr, h1, h2, h3, h4, h5, h6, ol, ul, pre, table, address, fieldset { margi
   width: 940px;
 }
 #wrapper #header #logo {
-  display: inline;
-  float: left;
-  position: relative;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 940px;
   margin-left: 0;
   margin-right: 0;
   font-weight: bold;
@@ -161,17 +155,19 @@ p, dl, hr, h1, h2, h3, h4, h5, h6, ol, ul, pre, table, address, fieldset { margi
   font-weight: normal;
   font-family: Georgia;
   margin-bottom: 0;
-}
-#wrapper #header #tagline {
   display: inline;
   float: left;
   position: relative;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 760px;
-  padding-left: 180px;
+  width: 940px;
+}
+#wrapper #header #tagline {
   margin-left: 0;
   margin-right: 0;
+  display: inline;
+  float: left;
+  position: relative;
+  width: 760px;
+  padding-left: 180px;
 }
 #wrapper #sidebar {
   display: inline;
@@ -179,7 +175,7 @@ p, dl, hr, h1, h2, h3, h4, h5, h6, ol, ul, pre, table, address, fieldset { margi
   position: relative;
   margin-left: 10px;
   margin-right: 10px;
-  width: 280px;
+  width: 220px;
 }
 #wrapper #content {
   display: inline;
@@ -187,7 +183,7 @@ p, dl, hr, h1, h2, h3, h4, h5, h6, ol, ul, pre, table, address, fieldset { margi
   position: relative;
   margin-left: 10px;
   margin-right: 10px;
-  width: 640px;
+  width: 700px;
 }
 #wrapper #footer {
   display: inline;

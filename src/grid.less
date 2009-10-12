@@ -11,68 +11,70 @@
 @import url(text.less);
 
 /**
- * This is to prevent errors.
- */
-@grid-column-width: 10;
-
-/**
  * Create a grid container.
  */
-.grid-container(@grid-container-columns:12, @grid-container-width: 960px, @grid-column-margin: 10px) {
-    width: @grid-container-width;
+.grid-container(@columns:16, @width: 960px, @margin: 10px) {
+    width: @width;
     margin-right: auto;
     margin-left: auto;
 
     /**
      * Variable passed to child grids.
      */
-    @grid-column-width: @grid-container-width / @grid-container-columns;
-}
-
-/**
- * Create a grid.
- */
-.grid(@grid-columns: 0) {
-
+    @column-width: @width / @columns;
+    
     /**
-     * Styles
+     * Create a grid.
      */
-    display: inline;
-    float: left;
-    position: relative;
-    margin-left: @grid-column-margin;
-    margin-right: @grid-column-margin;
-    width: @grid-column-width * @grid-columns - 2 * @grid-column-margin;
+    .grid(@grid-columns: 0) {
+    
+        /**
+         * Styles
+         */
+        display: inline;
+        float: left;
+        position: relative;
+        margin-left: @margin;
+        margin-right: @margin;
+        width: @grid-columns * @column-width - 2 * @margin;
+    }
+    
+    /**
+     * Add empty columns to the left.
+     */
+    .prefix(@prefix: 0) {
+        padding-left: @column-width * @prefix;
+    }
+    
+    /**
+     * Add empty columns to the right.
+     */
+    .suffix(@suffix: 0) {
+        padding-right: @column-width * @suffix;
+    }
+    
+    /**
+     * Pull grid to the left.
+     */
+    .pull(@pull: 0) {
+        left: 0 - @column-width * @pull;
+    }
+    
+    /**
+     * Push grid to the right.
+     */
+    .push(@push: 0) {
+        left: @column-width * @push;
+    }
 }
 
 /**
- * Add empty columns to the left.
+ * The following 2 mixins would ideally be defined inside the .grid-container
+ * mixin since it isn't relevant in any other scope. There is a bug in LESS
+ * that makes it impossible to nest mixins that don't take arguments so they
+ * are defined globally for now.
  */
-.prefix(@grid-prefix-columns: 0) {
-    padding-left: @grid-column-width * @grid-prefix-columns;
-}
-
-/**
- * Add empty columns to the right.
- */
-.suffix(@grid-suffix-columns: 0) {
-    padding-right: @grid-column-width * @grid-suffix-columns;
-}
-
-/**
- * Pull grid to the left.
- */
-.pull(@grid-pull-columns: 0) {
-    left: 0 - @grid-column-width * @grid-pull-columns;
-}
-
-/**
- * Push grid to the right.
- */
-.push(@grid-push-columns: 0) {
-    left: @grid-column-width * @grid-push-columns;
-}
-
+ 
 /**
  * The first grid inside another grid.
  */
