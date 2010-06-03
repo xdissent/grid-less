@@ -1,97 +1,75 @@
 /**
  * Grid LESS
  *
- * Horizontal Grid
+ * Horizontal and vertial grid system for LESS
  *
  * Copyright 2009 Greg Thornton <xdissent@gmail.com>
  * License: http://creativecommons.org/licenses/by-sa/3.0/us/
  */
+ 
+@import url("reset.less");
+@import url("text.less");
+ 
+@grid_width: 960px;
+@grid_columns: 16;
+@grid_margin: 10px;
 
-@import url(reset.less);
-@import url(text.less);
+// Determine grid column width
+@grid_column_width: @grid_width / @grid_columns;
 
-/**
- * Create a grid container.
- */
-.grid-container(@columns:16, @width: 960px, @margin: 10px) {
-    width: @width;
-    margin-right: auto;
-    margin-left: auto;
+// Grid namespace
+#grid {
 
-    /**
-     * Variable passed to child grids.
-     */
-    @column-width: @width / @columns;
+    // Grid container
+    .container {
     
-    /**
-     * Create a grid.
-     */
-    .grid(@grid-columns: 0) {
+        width: @grid_width;
+        margin-left: auto;
+        margin-right: auto;
+    }
     
-        /**
-         * Styles
-         */
+    // Grid column
+    .grid(@columns: @grid_columns) {
+    
         display: inline;
         float: left;
         position: relative;
-        margin-left: @margin;
-        margin-right: @margin;
-        width: @grid-columns * @column-width - 2 * @margin;
+        margin-left: @grid_margin;
+        margin-right: @grid_margin;
+        width: @grid_column_width * @columns - 2 * @grid_margin;
     }
     
-    /**
-     * Add empty columns to the left.
-     */
-    .prefix(@prefix: 0) {
-        padding-left: @column-width * @prefix;
+    // The first grid inside another grid.
+    .alpha {
+        margin-left: 0;
     }
     
-    /**
-     * Add empty columns to the right.
-     */
-    .suffix(@suffix: 0) {
-        padding-right: @column-width * @suffix;
+    // The last grid inside another grid.
+    .omega {
+        margin-right: 0;
     }
-    
-    /**
-     * Pull grid to the left.
-     */
-    .pull(@pull: 0) {
-        left: 0 - @column-width * @pull;
-    }
-    
-    /**
-     * Push grid to the right.
-     */
-    .push(@push: 0) {
-        left: @column-width * @push;
-    }
-}
 
-/**
- * The following 2 mixins would ideally be defined inside the .grid-container
- * mixin since it isn't relevant in any other scope. There is a bug in LESS
- * that makes it impossible to nest mixins that don't take arguments so they
- * are defined globally for now.
- */
- 
-/**
- * The first grid inside another grid.
- */
-.alpha {
-    margin-left: 0;
-}
-
-/**
- * The last grid inside another grid.
- */
-.omega {
-    margin-right: 0;
-}
-
-/**
- * Make an element clear all floats.
- */
-.clear {
-    clear: both;
+    // Prepend blank columns
+    .prefix(@prefix) {
+    
+        padding-left: @grid_column_width * @prefix;
+    }
+    
+    // Append the grid blank columns
+    .suffix(@suffix) {
+    
+        padding-right: @grid_column_width * @suffix;
+    }
+    
+    // Pull to the left by column widths
+    .pull(@pull) {
+    
+        left: 0 - @grid_column_width * @pull;
+    }
+    
+    // Push to the left by column widths
+    .push(@push) {
+    
+        left: @grid_column_width * @push;
+    }
 }

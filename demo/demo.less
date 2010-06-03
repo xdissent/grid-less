@@ -10,18 +10,19 @@
 /**
  * Import Grid LESS.
  */
-@import url(../src/grid.less);
+@import url("../src/grid.less");
 
 #wrapper {
-    .grid-container;
+    #grid .container;
      
     #header {
-        .grid(16);
+        #grid .grid(6);
         
         #logo {
-            .grid(16);
-            .alpha;
-            .omega;
+            #grid .grid(6);
+            #grid .alpha;
+            #grid .omega;
+            
             .gargantuan;
 
             font-weight: normal;
@@ -30,22 +31,52 @@
         }
         
         #tagline {
-            .grid(13);
-            .prefix(3);
-            .alpha;
-            .omega;
+            #grid .grid(3);
+            #grid .alpha;
+            #grid .omega;
+            #grid .prefix(3);
+        }
+    }
+    
+    #navigation {
+        #grid .grid(8);
+        #grid .prefix(2);
+        
+        > li {
+            #grid .grid(2);
+            
+            &:nth-child(4n+1) {
+                #grid .alpha;
+                clear: both;
+            }
+            
+            &:nth-child(4n+4) {
+                #grid .omega;
+            }
+            
+            a {
+                color: white;
+            }
+            
+            .h3;
+            
+            text-align: center;
+            background-color: grey;
+            margin-top: @line-height / 2;
+            margin-bottom: @line-height / 2;
         }
     }
     
     #sidebar {
-        .grid(4);
+        #grid .grid(4);
+        clear: both;
     }
 
     #content {
-        .grid(12);
+        #grid .grid(12);
     }
 
     #footer {
-        .grid(16);
+        #grid .grid(16);
     }
 }
